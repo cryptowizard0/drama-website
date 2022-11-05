@@ -1,8 +1,17 @@
 const express = require("express");
 const app = express();
 const axios = require("axios");
+const dotenv = require('dotenv').config()
 
-const port = 10010; //服务器启动端口
+// serve port
+const port = 10010;
+
+// notion api - drama index database
+const api_addr = `https://api.notion.com/v1/databases/${process.env.NOTION_DATABASE_ID_DRAMA}`;
+
+// notion api - auth token
+const auth = `Bearer ${process.env.NOTION_TOKEN_DRAMA}`;
+
 app.all("*", function (req, res, next) {
   // //设置允许跨域的域名，*代表允许任意域名跨域
   res.header("Access-Control-Allow-Origin", req.header.origin || "*");
@@ -23,7 +32,7 @@ app.get("/api/getData", async function (req, res) {
   console.time();
   try {
     const resData = await axios.post(
-      "https://api.notion.com/v1/databases/9c3c747d981540799c2c17aaf3af15b7/query",
+      api_addr,
       {
         sorts: [
           {
@@ -37,8 +46,7 @@ app.get("/api/getData", async function (req, res) {
         headers: {
           "Content-Type": "application/json",
           "Notion-Version": "2022-02-22",
-          Authorization:
-            "Bearer secret_lVlC1fCK8kVPwlJqaTZJM3QUSNAygUTtYddPpcRsxac",
+          Authorization: auth,
         },
       }
     );
