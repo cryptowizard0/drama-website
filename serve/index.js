@@ -7,7 +7,7 @@ const dotenv = require('dotenv').config()
 const port = 10010;
 
 // notion api - drama index database
-const api_addr = `https://api.notion.com/v1/databases/${process.env.NOTION_DATABASE_ID_DRAMA}`;
+const api_addr = `https://api.notion.com/v1/databases/${process.env.NOTION_DATABASE_ID_DRAMA}/query`;
 
 // notion api - auth token
 const auth = `Bearer ${process.env.NOTION_TOKEN_DRAMA}`;
