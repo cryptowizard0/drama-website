@@ -1,4 +1,4 @@
-# xg_pro
+# Drama Website
 
 ## Project setup
 ```

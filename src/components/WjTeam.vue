@@ -16,7 +16,7 @@
             </div>
             <div>
                 <img src="../assets/img/personnel/3.jpg" alt="">
-                <div>POTTER</div>
+                <div>JOBS</div>
                 <div>Photographer</div>
             </div>
             <div>
