@@ -137,9 +137,14 @@ export default {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      h3,
+      h3 {
+        margin-bottom: 0;
+      }
       h4 {
-        margin-bottom: 30px;
+        margin-bottom: 10px;
+      }
+      p {
+        margin-bottom: 50px;
       }
     }
   }

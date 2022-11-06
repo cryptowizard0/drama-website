@@ -142,6 +142,9 @@ export default {
         });
         that.getCardInfo(_time[dataIndex]);
       });
+      window.addEventListener("resize", () => {
+        myChart.resize()
+      })
     },
     getCardInfo(day) {
       const _day = formatDay(day, "YYYY-MM-DD");

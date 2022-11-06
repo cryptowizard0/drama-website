@@ -7,7 +7,7 @@
       <div class="wj-drama_img">
         <img src="../assets/img/ls/dramahunter.png" alt="" />
         <p class="wj-text">
-          They're a bunch of cute little who keep their eyes open on
+          They're a bunch of cute little goblins who keep their eyes open on
           everything going on in the Cosmos, they want the community to be
           active, but they refuse to be fooled. Again, they reject all opaque
           operations and bad behavior.
@@ -48,13 +48,13 @@ export default {
 </script>
 <style lang="scss" scoped>
 .wj-main {
+  width: calc(100vw - 130px);
   padding: 70px 25px 10px 25px;
   background-color: #fff;
 }
 
 .wj-info {
   background-color: #88c6f7;
-  text-indent: 2em;
   padding-left: 36px;
   padding-right: 60px;
   display: flex;
@@ -63,7 +63,7 @@ export default {
 
 .wj-drama_img {
   width: 100%;
-
+  flex: 2;
   img {
     width: 60%;
     margin-top: 20px;
@@ -71,10 +71,16 @@ export default {
 }
 
 .wj-text {
+  overflow: hidden;
+  text-indent: 2em;
   font-size: 48px;
   text-decoration: underline;
   padding: 0 200px;
   padding-top: 30px;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
 }
 
 .wj_boder {
@@ -82,12 +88,11 @@ export default {
 }
 
 .wj-dt_img {
-  width: 800px;
-  // margin-right: 190px;
+  flex: 1;
   margin-top: 20px;
-
   img {
-    width: 800px;
+    min-width: 600px;
+    width: 100%;
   }
 }
 
