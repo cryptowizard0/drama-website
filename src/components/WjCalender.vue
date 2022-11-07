@@ -100,7 +100,7 @@ export default {
               label: {
                 show: true,
                 position: "inside",
-                formatter: ["{b|\b}"].join("\n"),
+                formatter: "{b|}",
 
                 rich: {
                   b: {
@@ -143,8 +143,8 @@ export default {
         that.getCardInfo(_time[dataIndex]);
       });
       window.addEventListener("resize", () => {
-        myChart.resize()
-      })
+        myChart.resize();
+      });
     },
     getCardInfo(day) {
       const _day = formatDay(day, "YYYY-MM-DD");
@@ -221,7 +221,7 @@ export default {
     display: flex;
     background: #f6fca9;
 
-    >div {
+    > div {
       flex: 1;
       width: 100%;
       background: transparent;
@@ -331,7 +331,6 @@ export default {
     flex: 1;
     background: transparent;
   }
-
 }
 
 .el-calendar {
@@ -390,7 +389,6 @@ export default {
 .el-card {
   background-color: transparent !important;
 }
-
 
 .el-button {
   background-color: #d06776 !important;
